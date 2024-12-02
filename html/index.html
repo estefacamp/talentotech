@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ecommerce</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
+       <link rel="stylesheet" href="/css/style.css">
+</head>
+<!--NAV****************************************************************-->
+<section id="header">
+    <div class="logo-container">
+        <a href="#"><img src="/img/E.png" class="logo"alt="logo elara"></a>
+        </div>
+        <nav id="navbar">
+            <ul class="nbar" id="navbar">
+                <li id="Buscar-btn"><a href="javascript:void(0);" onclick="toggleSearch()"><i class="fa-solid fa-magnifying-glass"></i> Buscar</a>
+                <input type="text" id="search-input" placeholder="Buscar..."></li>
+                <li><a href="/html/informacion.html" id="informacion-btn"><i class="fas fa-info-circle"></i> Información</a></li>
+                <li><a href="/html/ingresar.html" id="ingresar-btn"><i class="fas fa-envelope"></i> Ingresar</a></li>
+                <li><a href="#" id="carrito-btn"><i class="fas fa-shopping-cart"></i> Carrito</a></li>
+            </ul>
+            </nav>
+</section>
+    <section id="hero" class="ero">
+        <div class="h6-container">
+            <h6>*El MEJOR SURTIDO PARA TU NEGOCIO*</h6>
+            <h6>*DESCUENTOS IMPERDIBLES*</h6>
+            <h6>*DISTRIBUIDORES Y FABRICANTES*</h6>
+            </div>
+            <div class="bn"><h3>BIENVENIDOS A NUESTRA</h3></div>
+            <div class="tm"><h3>TIENDA MAYORISTA</h3></div>  
+            <div class="ofertas">
+            <div class="cien"><p>5% off superando los $100.000</p></div>
+            <div class="doscientos"><p>10% off superando los $300.000   </p></div>
+            <div class="trescientos"><p>15% off superando los $400.000</p></div>
+        </div>
+    </section>
+    <section class="contenedor">
+        <div class="contenedor-items">
+        <div class="item">
+            <span class="titulo-item" id="extermina mosquitos">Extermina Moquitos</span>
+            <img src="/img/raid.png" alt="" class="img-item">
+            <span class="precio-item">$6000</span>
+            <button class="boton-item">Agregar al carrito
+            <span class="tooltip">Raid calasico mata moscas y mosquitos.</span>
+            </button>
+        </div>
+        <div class="item">
+            <span class="titulo-item">Extermina Cucarachas</span>
+            <img src="/img/raid cucarachas.png" alt="" class="img-item">
+            <span class="precio-item">$5200</span>
+            <button class="boton-item">Agregar al carrito<span class="tooltip">Raid calasico mata cucarachas.</span></button>
+        </div>
+        <div class="item">
+                <span class="titulo-item">Repelente clasico OFF</span>
+                <img src="/img/off.aerosol.png" alt="" class="img-item">
+                <span class="precio-item">$7200</span>
+                <button class="boton-item">Agregar al carrito<span class="tooltip">OFF calasico, Repelente</span></button>
+            </div>
+            <div class="item">
+                    <span class="titulo-item">OFF Maxima duracion</span>
+                    <img src="/img/off niños2,png.webp" alt="" class="img-item">
+                    <span class="precio-item">$10500</span>
+                    <button class="boton-item">Agregar al carrito<span class="tooltip">OFF crema, maxima duracion (10 hs) 150 gr.</span></button>
+            </div>
+            <div class="item">
+                    <span class="titulo-item">Lamparita 10w Interlec</span>
+                    <img src="/img/interlec.png" alt="" class="img-item">
+                    <span class="precio-item">$2500</span>
+                    <button class="boton-item">Agregar al carrito<span class="tooltip">Lamparita 10w Fria, 12 unidades el pack</span></button>
+            </div>
+            <div class="item">
+                    <span class="titulo-item">Lamparita Macroled 12w </span>
+                    <img src="/img/macroled.png" alt="" class="img-item">
+                    <span class="precio-item">$3000</span>
+                    <button class="boton-item">Agregar al carrito<span class="tooltip">Lamparita 12w Fria, 12 unidades el pack</span></button>
+            </div>
+            <div class="item">
+                    <span class="titulo-item">Espiral Raid</span>
+                    <img src="/img/espiral.jpg" alt="" class="img-item">
+                    <span class="precio-item">$8000</span>
+                    <button class="boton-item">Agregar al carrito<span class="tooltip">Espiral extermina mosquito, caja 12 bolsitas 4 unidades C/u</span></button>
+            </div>
+            <div class="item">
+                    <span class="titulo-item">Repelente FUYI !</span>
+                    <img src="/img/fuyi.png" alt="" class="img-item">
+                    <span class="precio-item">$7000</span>
+                    <button class="boton-item">Agregar al carrito<span class="tooltip"> repelente mosquitos clasico 
+                        fuyi</span></button>
+            </div>
+            <div class="item">
+                    <span class="titulo-item">Repelente niños </span>
+                    <img src="/img/off niños,png.webp" alt="" class="img-item">
+                    <span class="precio-item">$10200</span>
+                    <button class="boton-item">Agregar al carrito<span class="tooltip">Repelente niños mata mosquitos.</span></button>
+                </div>
+            </div>
+<!--Carrito de Compras****************************************************-->
+<!-- Carrito de Compras y Botón Comprar -->
+<div class="carrito" id="carrito">
+    <div class="header-carrito">
+        <h2>Tu Carrito</h2>
+    </div>
+    <div class="carrito-items">
+        <ul id="lista-carrito"></ul>
+        <button id="vaciar-carrito"><i class="fa-solid fa-trash"></i> Vaciar Carrito</button>
+        
+        <!-- Botón de Comprar -->
+        <button id="comprar-btn" class="comprar-btn">Comprar</button>
+
+        <!-- Formulario para Ingresar Datos -->
+        <div id="formulario-compra" class="formulario-compra" style="display:none;">
+            <h3>Detalles de Compra</h3>
+            <form id="form-compra">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+                
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" required><br><br>
+                
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                
+                <button type="submit">Confirmar Compra</button>
+            </form>
+        </div>
+    </div>
+</div>
+</section>
+<!--FOOTER***************************************************************-->
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 Estefania Campisi. Todos los derechos reservados.</p>
+        <ul class="footer-links">
+            <div class="social-icons">
+                <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+                <i class="fab fa-twitter"></i></a>
+            </div>
+        </ul>
+    </div>
+</footer>
+    <script src="/js/index.js" defer></script>
+    </body>
+</html> 

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Mayoristas</title>
+</head>
+<body>
+    <section id="header">
+        <div class="logo-container">
+        <a href="#"><img src="/img/E.png" class="logo" alt="logo elara"></a>
+        </div>
+        <nav id="navbar">
+            <li id="Buscar-btn"><a href="javascript:void(0);" onclick="toggleSearch()"><i class="fa-solid fa-magnifying-glass"></i> Buscar</a>
+                <!-- Campo de búsqueda oculto inicialmente -->
+                <input type="text" id="search-input" placeholder="Buscar..."></li>
+            <li><a href="informacion.html" id="informacion-btn"><i class="fas fa-info-circle"></i> Información</a></li>
+            <li><a href="ingrese.html" id="ingresar-btn"><i class="fas fa-envelope"></i> Ingresar</a></li>
+            <li><a href="#" id="carrito-btn"><i class="fas fa-shopping-cart"></i> Carrito</a></li>
+        </nav>
+    </section>
+
+    <!-- Título principal y secciones con subtítulos y párrafos -->
+    <main class="información--">
+        <h1>Bienvenidos a la tienda de Mayoristas</h1>
+
+        <section>
+            <h2>¿Qué ofrecemos?</h2>
+            <p class="informacion--p">En nuestra tienda mayorista ofrecemos productos de alta calidad a precios competitivos. Nos especializamos en ventas al por mayor para empresas, comercios y emprendedores.</p>
+        </section>
+
+        <section>
+            <h2>Beneficios de comprar al por mayor</h2>
+            <p class="informacion--p">Comprar al por mayor te permite obtener descuentos exclusivos y ahorrar en grandes cantidades. Además, contamos con un servicio de atención al cliente especializado para resolver todas tus dudas.</p>
+        </section>
+
+        <section>
+            <h2>Cómo hacer un pedido</h2>
+            <p class="informacion--p"></p>Realizar un pedido es fácil. Solo debes registrarte en nuestro sitio web, seleccionar los productos que deseas y completar el proceso de compra. Nos encargamos de hacer llegar tu pedido de manera rápida y segura.</p>
+        </section>
+    </main>
+
+    <!-- Ícono de WhatsApp al lado derecho inferior -->
+    <a href="https://wa.me/1234567890" id="whatsapp-icon" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+    <!-- Ícono para volver al inicio -->
+    <a href="index.html" id="back-to-home">
+        <i class="fas fa-home"></i> Volver al inicio
+    </a>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Estefania Campisi. Todos los derechos reservados.</p>
+            <ul class="footer-links">
+                <div class="social-icons">
+                    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="/js/index.js" defer></script>
+</body>
+</html>

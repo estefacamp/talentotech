@@ -1,0 +1,545 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Titillium+Web:wght@200;300;400;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+
+}
+:root {
+    --color-fondo-naranja:rgb(124, 11, 11); /* Color de fondo*/
+    --color-borde-blanco: white; /* Color del borde */
+    --color-letra-casinegro: #222; /* Color letra */
+    --color--header-casiblanco: #E3E6F3;/*color header*/
+    --color--negro:black;   
+}
+h1{
+    font-size: 3.125rem; /* 50px */
+    line-height: 4rem; /* 64px */ 
+}
+h2{
+    font-size: 2.875rem; /* 46px */
+    line-height: 3.375rem; /* 54px */
+}
+/*h3{
+    font-size: 40px;
+    line-height: 44px;/
+}*/
+h4{
+    font-size: 1.25rem; /* 20px */
+}h5{
+    font-size: 1.1875rem; /* 19px */
+}h6{
+    font-size: 0.625rem; /* 10px */
+}
+p{
+    font-size: 1rem; /* 16px */
+    margin: 1rem 0 1.25rem 0; /* 15px 0 20px */
+}
+/*header start************************************************************/
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 0.625rem; /* 20px 10px */
+    box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.06);
+    top:0rem;
+    left:0rem;
+    z-index: 10;
+    
+}
+/*logo imagen*/
+.logo{
+    max-width: 25%; /* Limita el tamaño máximo del logo */
+    height: auto; /* Mantiene la proporción */
+    
+}
+.nbar{
+color:var(--color-letra-casinegro);
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    list-style: none;
+    padding: 0 ;
+    gap: 1.25rem; /* 20px */
+    z-index: 5;
+}
+/* estilo para los enlace */
+#navbar a {
+    color:var(--color--negro); /* cambia el color del texto de los enlaces */
+    text-decoration:none; /* eliminar subrayado */
+    font-weight: 600; /* opcion de hacer el texto en negrita */
+    font-size: 16px;
+    transition:0.3s ease;
+}
+/* cambiar el color de los enlaces al pasar el mouse */
+#navbar a:hover {
+    color:var(--color-fondo-naranja); /* cambia el color al pasar el ratón (puedes ajustar este color) */
+}
+/* ocultar el campo de búsqueda por defecto */
+#search-input {
+    display: none;
+    width: 200px;
+    padding: 5px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Estilo cuando el buscador está visible */
+#search-input.show {
+    display: inline-block;
+}
+
+/* Estilo para el icono de búsqueda */
+#Buscar-btn {
+    cursor: pointer;
+}
+
+/*homepag**HERO*************************************************/
+#hero{
+    background-color: var(--color-fondo-naranja);
+    height: 100vh; /* Asegura que la sección ocupe toda la altura de la ventana */
+    display: flex; /* Usamos flexbox */
+    flex-direction: column; /* Los elementos se apilan de forma vertical */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    text-align: center; /* Alinea el texto al centro */
+    padding: 1.0rem; /* 20px  espacio interno*/
+    width: 100%;
+    box-sizing: border-box;
+}
+#hero {
+    position: relative;
+}
+.h6-container{
+        display: flex;
+        top: 0; /* coloca ariba */
+        left: 0;
+        gap: .5rem; /* 23px  Espaciado entre los elementos h6 */
+        font-size: 3rem;
+        width: 90%;
+        justify-content: space-between;
+        color:var(--color--header-casiblanco);
+        padding: 0.2rem; /* 10px */ /* Espacio interno */
+        margin: 0 auto; /* Centra el elemento */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Opcional: sombra suave */
+    }  
+.bn{
+    color:var(--color-fondo-naranja);
+    text-shadow: 
+    1px 1px 0 white, 
+    -1px -1px 0 white, 
+    -1px 1px 0 white, 
+     1px -1px 0 white; /* Borde blanco alrededor del texto */
+     padding: 0.625rem; /* 10px */
+    font-size: 3.5rem;
+     font-weight: 600; /* Negrita */
+    }
+.tm{
+    font-size: 3.5rem;
+    color: var(--color--header-casiblanco);
+    padding: 0.625rem; /* 10px */
+    font-weight: 600; /* Negrita */
+}
+.cien, .doscientos, .trescientos {
+    font-size: 1rem;
+    color: var(--color--header-casiblanco);
+    padding: 0.3125rem; /* 5px */
+    border: 0.125rem solid var(--color--header-casiblanco); /* 2px */
+    display: inline-block;
+    border-radius: 30px; /* Borde redondeado */
+}
+.cien:hover, .doscientos:hover, .trescientos:hover {
+    transform: translateY(-5px); /* Efecto de levantamiento cuando se pasa el mouse */
+    background-color: var(--color-fondo-naranja); /* Cambia el fondo al pasar el mouse */
+    color: white; /* Cambia el color del texto */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+.cien {
+    border-radius: 1.875rem; /* Redondeo extra */
+}
+.doscientos {
+    border-radius: 1.875rem;
+}
+.trescientos {
+    border-radius: 1.875rem;
+}
+.ofertas {
+    display: flex;
+    justify-content: center; /* Centra las ofertas horizontalmente */
+    gap: .5rem; /* Espacio entre los elementos */
+    margin-top: 1rem; /* Espacio superior */
+    width: 100%; /* Asegura que el ancho sea 100% de su contenedor */
+    max-width: 80%; /* Llimita el ancho máximo a 80% para no desbordar */
+    margin-left: auto; /* Centra la sección horizontalmente */
+    margin-right: auto; /* Centra la sección horizontalmente */
+    text-align: center; /* Centra el texto de las ofertas */
+}
+.ero {
+    color: var(--color-fondo-naranja); /* Mantiene color de texto */
+    max-width: 100%; /* Limita el ancho máximo */
+    font-size: 1.5rem; /* Ajuste del tamaño de fuente */
+}
+#hero {
+    height: auto; /* En lugar de 100vh */
+    min-height: 100vh; /* Para asegurarte de que ocupe toda la pantalla en contenido pequeño */
+}
+.body{
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos se apilen de arriba hacia abajo */
+    min-height: 100vh; /* Asegura que el contenedor ocupe al menos toda la altura de la ventana */
+    justify-content: space-between; /* Esto empuja el footer hacia el final */   
+}
+/* Contenedor principal ***************************************************/
+.contenedor .contenedor-items {
+    margin-top: 1.875rem; /* Espaciado superior */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 250px)); /* Tamaño fijo de las cards */
+    gap: 1rem; /* Espacio ajustado entre las cards */
+    justify-items: center; /* Centra las cards dentro de la grid */
+    width: 100%;
+    transition: 3s;
+    justify-content: flex-end; /* Empuja las cards hacia la derecha */
+}
+/* Estilo de las cards ***********************************************/
+.contenedor .contenedor-items .item {
+    width: 230px; /* Ancho fijo para todas las cards */
+    height: 300px; /* Altura fija para las cards */
+    padding: 0; /* Eliminamos padding extra */
+    margin: 0.625rem; /* Espaciado entre las cards */
+    border: 0.0625rem solid #666; /* Borde fino */
+    border-radius: 0.625rem; /* Bordes redondeados */
+    padding: 1rem; /* Padding dentro de la card */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transición suave */
+    background-color: white; /* Fondo blanco dentro de las cards */
+}
+
+/* Efecto hover para las cards */
+.contenedor .contenedor-items .item:hover {
+    box-shadow: 0 0 0.625rem #666; /* Sombra suave al hacer hover */
+    transform: scale(1.05); /* Efecto de ampliación */
+}
+
+/* Imagen dentro de la card *******************************************/
+.contenedor .contenedor-items .img-item {
+    width: 100%;
+    height: 120px; /* Altura fija para la imagen dentro de la card */
+    object-fit: contain; /* Mantiene la imagen proporcional dentro del contenedor */
+}
+
+/* Título de la card ***************************************************/
+.contenedor-items .item .titulo-item {
+    display: block;
+    font-weight: bolder;
+    text-align: center;
+    text-transform: uppercase; /* Mayúsculas para el título */
+    margin-bottom: 0.5rem; /* Espaciado inferior */
+}
+
+/* Estilo del precio de la card ****************************************/
+.contenedor .contenedor-items .precio-item {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.375rem; /* Tamaño adecuado para el precio */
+    margin-bottom: 0.5rem; /* Espaciado inferior */
+}
+
+/* Estilo del botón dentro de la card **********************************/
+.contenedor-items .item .boton-item {
+    display: block;
+    margin: 0.625rem auto; /* Centra el botón */
+    border: none;
+    background: var(--color--negro); /* Fondo oscuro */
+    color: var(--color-borde-blanco); /* Texto blanco */
+    padding: 0.3125rem 0.9375rem; /* Padding ajustado */
+    border-radius: 0.3125rem; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+}
+
+/* Tooltip dentro del botón *******************************************/
+.boton-item {
+    position: relative; /* Necesario para el tooltip */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.tooltip {
+    visibility: hidden; /* Tooltip oculto por defecto */
+    width: 75%; /* Ancho ajustado */
+    background-color: #333; /* Fondo oscuro para el tooltip */
+    color: #fff; /* Texto blanco */
+    text-align: center;
+    border-radius: 0.3125rem; /* Bordes redondeados */
+    padding: 5px; /* Espaciado dentro del tooltip */
+    position: absolute; /* Posicionamiento absoluto */
+    z-index: 1; /* Asegura que el tooltip quede sobre otros elementos */
+    bottom: 125%; /* Posiciona el tooltip por encima del botón */
+    left: 50%; /* Centra el tooltip horizontalmente */
+    margin-left: -50px; /* Ajuste para centrar */
+    opacity: 0; /* Tooltip invisible por defecto */
+    transition: opacity 0.3s; /* Transición suave */
+}
+
+.boton-item:hover .tooltip {
+    visibility: visible; /* Muestra el tooltip */
+    opacity: 1; /* Tooltip visible */
+}
+
+/*FOOTER*******************************************************************/
+.container-footer {
+    grid-template-columns: 1fr; /* Esto hace que el footer ocupe todo el ancho de la columna */
+    width: 100%; /* Asegura que el footer ocupe todo el ancho */
+}
+footer {
+background-color: #000; /* Fondo negro */
+color: #fff; /* Texto blanco */
+text-align: center;
+padding: 0rem 0px; /* 20px 0 */
+width: 100%; /* Asegura que el footer ocupe todo el ancho de la pantalla */
+position: relative; /* Asegura que no esté limitado por márgenes */
+box-sizing: border-box;
+display: flex;
+flex-direction: column; /* Alinea los elementos de arriba hacia abajo */
+left:0rem;
+right:0rem ;
+}
+.footer-content {
+width: 100%; /* Hace que el contenido ocupe el 100% del ancho del footer */
+padding: 0 10px; /* Espaciado horizontal para evitar que el contenido se pegue a los bordes */
+text-align: center;
+}
+.footer-links {
+list-style-type: none;
+padding: 0;
+}
+.footer-links li {
+    display: inline;
+    margin: 0 0.9375rem; /* 15px */
+    gap: 20px;
+}
+.footer-links a {
+    color: #fff; /* Enlaces en blanco */
+    text-decoration: none;
+}
+/******INFORMACION HTML****************************************************/
+/* Main Section */
+/* Estilo general para el contenedor principal */
+main {
+    margin: 40px auto;
+    max-width: 1000px;
+    padding: 0 20px;
+    background-color: #fafafa; /* Fondo más claro para contraste */
+    border-radius: 12px; /* Bordes redondeados para suavizar la apariencia */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más profunda para dar una sensación de elevación */
+}
+
+/* Estilo para los encabezados */
+h1, h2 {
+    font-family: 'Verdana', sans-serif;
+    color: var(--color-fondo-naranja);
+    text-align: center;
+    text-transform: uppercase; /* Letras en mayúsculas para mayor énfasis */
+    letter-spacing: 1px; /* Espaciado entre letras para una mejor legibilidad */
+    margin-bottom: 15px; /* Espacio debajo de los títulos */
+}
+
+/* Estilo para los párrafos dentro de la sección de información */
+.informacion--p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 15px 0;
+    text-align: justify;
+    color: #333; /* Color más suave para el texto */
+    text-indent: 20px; /* Sangría en el primer párrafo para mejorar la presentación */
+}
+
+/* Estilo para los contenedores de información */
+.informacion-- {
+    background-color: #2e0303;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    line-height: 1.6;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra más profunda */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Agrega una transición suave */
+}
+
+/* Efecto al pasar el ratón sobre los contenedores de información */
+.informacion--:hover {
+    transform: translateY(-5px); /* Eleva el contenedor ligeramente al hacer hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); /* Aumenta la sombra al hacer hover */
+}
+
+/* Estilo para los títulos dentro de las secciones */
+section h2 {
+    color: #2e0303;
+    font-size: 1.5em; /* Tamaño de fuente mayor para los subtítulos */
+    margin-bottom: 10px;
+    font-weight: bold; /* Negrita para resaltar más el título */
+}
+
+/* Fondo del cuerpo para una apariencia más limpia */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Fondo general más suave */
+    color: #333; /* Color de texto más suave para todo el cuerpo */
+    margin: 0;
+    padding: 0;
+}
+
+/* Agregar una sombra sutil al contenedor principal cuando no está en hover */
+main:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Ícono de WhatsApp */
+#whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+#whatsapp-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Ícono para volver al inicio */
+#back-to-home {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #b3210b;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#back-to-home:hover {
+    background-color: #b93329;
+}
+/*INGRESE****************************************************************/
+/* Estilo para el contenedor principal */
+.register-form {
+    display: none; /* Ocultamos el formulario de registro por defecto */
+    animation: slideIn 0.3s ease-in-out;
+}
+
+/* Estilo para el enlace de cambio de sección */
+p a {
+    color: #6d2e2a;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para la sección de inicio de sesión y registro */
+#login-seccion, #registrarse-info {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+#login-seccion, #registrarse-info {
+    z-index: 10;  /* Asegúrate de que sea un valor alto */
+}
+/* Estilo para la sección de inicio de sesión y registro */
+#login-seccion, #registrarse-info {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: opacity 0.3s ease-in-out;  /* Añadimos transición en la opacidad */
+}
+
+/* Sección de registro oculta por defecto */
+#registrarse-info {
+    display: none;  /* Aseguramos que esté oculta por defecto */
+}
+
+/* Estilos adicionales para asegurar la visibilidad */
+.visible {
+    display: block !important;  /* Clase adicional para cambiar a display: block */
+    opacity: 1;
+}
+
+
+/*  generales para móviles */
+@media 
+(max-width: 480px) {
+#hero h3 {
+font-size: 1em;
+}
+.contenedor-items {
+grid-template-columns: 1fr;
+}
+}
+/* tablet */
+@media (min-width: 768px) 
+{
+body {
+font-size: 1.125rem; /* Aumentar un poco el tamaño de fuente */
+}
+#header {
+ padding: 1.5rem; /* Ajustar padding para tablets */
+ }
+.contenedor {
+max-width: 90%; /* Más ancho en tablets */
+}
+.contenedor-items {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas en tablets */
+}
+}
+/* Escritorio */
+@media (min-width: 1024px) {
+body {
+font-size: 1.25rem; /* Aumentar más para escritorio */
+align-items: center;
+}
+#header {
+padding: 2rem; /* Aumentar padding para escritorio */
+}
+.contenedor {
+max-width: 100%; /* Menos ancho en escritorio */
+}
+.contenedor-items {
+grid-template-columns: repeat(3, 1fr); /* Tres columnas en escritorio */
+}
+}
+.ero{
+color: var(--color-fondo-naranja); /* Mantener color de texto */
+max-width: 100%; /* Limitar el ancho máximo */
+} 
+/* Pantallas grandes */
+@media (min-width: 1440px) {
+body {
+font-size: 1.375rem; /* Aumentar más para pantallas grandes */
+}
+#header {
+padding: 2rem; /* Ajustar padding para pantallas grandes */
+}
+.contenedor {
+max-width: 70%; /* Menos ancho en pantallas grandes */
+}
+
+.contenedor-items {
+grid-template-columns: repeat(4, 1fr); /* Cuatro columnas en pantallas grandes */
+}
+}
