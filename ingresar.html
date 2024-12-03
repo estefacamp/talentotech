@@ -25,7 +25,36 @@
             </nav>
 </section>
 <!--registro-->
+<div class="container">
+    <h2>Iniciar sesión</h2>
+    <form action="#" method="POST">
+        <input type="text" id="username" name="username" placeholder="Usuario" required>
+        <input type="password" id="password" name="password" placeholder="Contraseña" required>
+        
+        <div class="checkbox-container">
+            <input type="checkbox" id="remember" name="remember">
+            <label for="remember">Recordar mis datos</label>
+        </div>
 
+        <button type="submit">Iniciar sesión</button>
+
+        <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+
+        <span class="register-link" onclick="toggleRegisterForm()">Registrarme</span>
+    </form>
+    <!-- Formulario de Registro -->
+    <div class="register-form" id="registerForm">
+        <h3>Formulario de Registro</h3>
+        <form action="#" method="POST">
+            <input type="text" id="firstName" name="firstName" placeholder="Nombre" required>
+            <input type="text" id="lastName" name="lastName" placeholder="Apellido" required>
+            <input type="text" id="dni" name="dni" placeholder="DNI" required>
+            <input type="tel" id="phone" name="phone" placeholder="Celular" required>
+            <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+            <button type="submit">Registrar</button>
+        </form>
+    </div>
+</div>
 
 <!--FOOTER***************************************************************-->
 <footer>

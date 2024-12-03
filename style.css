@@ -16,10 +16,12 @@
 h1{
     font-size: 3.125rem; /* 50px */
     line-height: 4rem; /* 64px */ 
+   
 }
 h2{
     font-size: 2.875rem; /* 46px */
     line-height: 3.375rem; /* 54px */
+    font-family: 'Verdana', sans-serif;
 }
 /*h3{
     font-size: 40px;
@@ -50,8 +52,8 @@ p{
 }
 /*logo imagen*/
 .logo{
-    max-width: 25%; /* Limita el tamaño máximo del logo */
-    height: auto; /* Mantiene la proporción */
+    max-width: 25%; 
+    height: auto; 
     
 }
 .nbar{
@@ -431,56 +433,85 @@ main:hover {
 #back-to-home:hover {
     background-color: #b93329;
 }
-/*INGRESE****************************************************************/
-/* Estilo para el contenedor principal */
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+/*ingresar******************************************************************/
+
+input[type="text"], input[type="password"], input[type="email"], input[type="tel"] {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-container input {
+    margin-right: 5px;
+}
+
+.forgot-password {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration:none; /* eliminar subrayado */
+}
+
+.register-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    color: #7c130d;
+}
+
 .register-form {
-    display: none; /* Ocultamos el formulario de registro por defecto */
-    animation: slideIn 0.3s ease-in-out;
+    display: none;
+    margin-top: 20px;
 }
 
-/* Estilo para el enlace de cambio de sección */
-p a {
-    color: #6d2e2a;
-    text-decoration: none;
+.register-form input {
+    margin-bottom: 10px;
+    
 }
 
-p a:hover {
-    text-decoration: underline;
+.register-form button  {
+    width: 100%;
+    padding: 10px;
+    background-color:#541107;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.container button{
+    width: 100%;
+    padding: 10px;
+    background-color:#541107;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-/* Estilo para la sección de inicio de sesión y registro */
-#login-seccion, #registrarse-info {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+.register-form button:hover {
+    background-color: var(--color-fondo-naranja);
 }
-#login-seccion, #registrarse-info {
-    z-index: 10;  /* Asegúrate de que sea un valor alto */
-}
-/* Estilo para la sección de inicio de sesión y registro */
-#login-seccion, #registrarse-info {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    transition: opacity 0.3s ease-in-out;  /* Añadimos transición en la opacidad */
-}
-
-/* Sección de registro oculta por defecto */
-#registrarse-info {
-    display: none;  /* Aseguramos que esté oculta por defecto */
-}
-
-/* Estilos adicionales para asegurar la visibilidad */
-.visible {
-    display: block !important;  /* Clase adicional para cambiar a display: block */
-    opacity: 1;
-}
-
-
+/*RESPONsiveE*********************************************************/
 /*  generales para móviles */
 @media 
 (max-width: 480px) {

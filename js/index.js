@@ -206,8 +206,8 @@ function setCookie(name, value, days) {
     let expires = "expires=" + d.toUTCString();
     document.cookie = name + "=" + value + ";" + expires + ";path=/";
 }
-
-// Redireccionar al formulario de registro
-function redirectToRegister() {
-    window.location.href = "register.html"; // Redirige a la página de registro
-}   
+    // Función para mostrar u ocultar el formulario de registro
+    function toggleRegisterForm() {
+        const registerForm = document.getElementById('registerForm');
+        registerForm.style.display = (registerForm.style.display === 'none' || registerForm.style.display === '') ? 'block' : 'none';
+    }
